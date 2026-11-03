@@ -1,3 +1,4 @@
+using Gamekit3D;
 using UnityEngine;
 
 public class SurvivalMod : MonoBehaviour
@@ -7,10 +8,14 @@ public class SurvivalMod : MonoBehaviour
 
     [SerializeField] private bool thirsty;
     [SerializeField] private bool parched;
+    
+    [SerializeField] private GameObject playerObject;
+    [SerializeField] private float timer = 10f
+        ;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        playerObject = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -22,11 +27,32 @@ public class SurvivalMod : MonoBehaviour
         */
         thirstAmount -= Mathf.Clamp(thirstSpeed*Time.deltaTime, 0, thirstAmount);
 
+        // if statement check if thirstamount is equal to or lower, then 50 AND if thirsty = false
         if (thirstAmount <= 50f && !thirsty)
         {
             Debug.Log("Getting thirsty....");
             thirsty = true;
         }
-          
+
+        timer -= Time.deltaTime;
+        if (timer <= 0f)
+        {
+             Damageable.DamageMessage msg = new Damageable.DamageMessage()
+                        {
+                            amount = 1,
+                            damager = this,
+                            damageSource = new Vector3(x: 0, y: 0, z: 0),
+                            direction = new Vector3(x: 0, y: 0, z: 0),
+                            throwing = false,
+                            stopCamera = false
+                        };
+                        playerObject.GetComponent<Damageable>().ApplyDamage(msg);
+                        Debug.Log("Damage by thirst!");
+                        timer = 10f;
+        }
+        if (thirstAmount <= 0 && thirsty)
+        {
+           
+        }
     }
 }
