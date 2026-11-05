@@ -1,3 +1,4 @@
+using System;
 using Gamekit3D;
 using UnityEngine;
 
@@ -10,8 +11,10 @@ public class SurvivalMod : MonoBehaviour
     [SerializeField] private bool parched;
     
     [SerializeField] private GameObject playerObject;
-    [SerializeField] private float timer = 10f
-        ;
+    [SerializeField] private float timer = 10f;
+
+    [SerializeField] private bool drinkPickup;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -63,6 +66,11 @@ public class SurvivalMod : MonoBehaviour
         timer = 10f;
         thirstSpeed = 10f;
         thirsty = false;
+    }
+
+    private void FixedUpdate()
+    {
+        playerObject = GameObject.Find("DestructibleBox");
     }
     
 }
