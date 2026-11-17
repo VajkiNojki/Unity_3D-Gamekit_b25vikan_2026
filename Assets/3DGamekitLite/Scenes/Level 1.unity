@@ -5806,10 +5806,10 @@ MonoBehaviour:
   CollisionTag: Player
   EventReference:
     Guid:
-      Data1: 859997441
-      Data2: 1258408011
-      Data3: 1717102006
-      Data4: -1636182950
+      Data1: 373769503
+      Data2: 1122726689
+      Data3: -2133305441
+      Data4: 290251784
     Path: event:/Test
   Event: 
   EventPlayTrigger: 3

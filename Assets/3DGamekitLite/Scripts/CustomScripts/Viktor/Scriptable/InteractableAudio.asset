@@ -14,13 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableAudio
   pickupHealthAudio:
     Guid:
-      Data1: 839476024
-      Data2: 1082442183
-      Data3: -610609237
-      Data4: -421792563
-    Path: event:/BoxDestory
-  boxDestroyAudio:
-    Guid:
       Data1: 0
       Data2: 0
       Data3: 0

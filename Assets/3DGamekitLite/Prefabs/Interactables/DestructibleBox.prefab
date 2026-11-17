@@ -1210,11 +1210,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 839476024
-      Data2: 1082442183
-      Data3: -610609237
-      Data4: -421792563
-    Path: event:/BoxDestory
+      Data1: 1002426556
+      Data2: 1310289835
+      Data3: 1022742924
+      Data4: -785758563
+    Path: event:/BoxDestroy
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
