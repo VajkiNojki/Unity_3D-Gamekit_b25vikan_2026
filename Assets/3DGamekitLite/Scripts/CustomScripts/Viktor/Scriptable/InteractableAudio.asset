@@ -21,11 +21,11 @@ MonoBehaviour:
     Path: event:/DoorSwitch
   boxDestroyAudio:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1002426556
+      Data2: 1310289835
+      Data3: 1022742924
+      Data4: -785758563
+    Path: event:/BoxDestroy
   doorAudio:
     Guid:
       Data1: -1618741125

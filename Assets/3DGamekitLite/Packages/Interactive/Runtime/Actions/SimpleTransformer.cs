@@ -40,6 +40,7 @@ namespace Gamekit3D.GameCommands
         {
             activate = true;
             if (OnStartCommand != null) OnStartCommand.Send();
+            Debug.Log ("Door open!");
         }
 
         public void FixedUpdate()
